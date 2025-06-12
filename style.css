@@ -15,6 +15,7 @@ header {
   color: rgb(242, 249, 244);
   padding: 20px;
   text-align: center;
+  transform: rotate(90deg);
 }
 
 nav ul {
