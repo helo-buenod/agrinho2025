@@ -1,4 +1,4 @@
-[21:42, 25/06/2025] .: * {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,7 +52,7 @@ nav a {
   border-radius: 10px;
   margin-right: 20px;
 }…
-[21:43, 25/06/2025] .: * {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -64,7 +64,6 @@ body {
   color: #333;
 }
 
-/* Alto contraste ativado */
 body.contraste-ativo {
   background-color: black;
   color: yellow;
