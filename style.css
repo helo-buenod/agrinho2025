@@ -9,6 +9,15 @@ body {
   background-color: #74f750;
   color: #333;
 }
+.contraste-ativo {
+  --cor-fundo: black;
+  --cor-texto: yellow;
+}
+a:focus {
+  outline: 3px dashed #333;
+  outline-offset: 4px;
+}
+
 
 header {
   background: linear-gradient(90deg, #005e3a, #92c83e);
