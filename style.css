@@ -5,7 +5,7 @@
 }
 header {
   background: linear-gradient(90deg, #388e3c, #a5d6a7); /* verde escuro → claro */
-  color: white;
+  color: rgb(38, 75, 14);
   text-align: center;
 }
 
