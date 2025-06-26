@@ -4,75 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conexão do Campo à Cidade</title>
-  <style>
-    :root {
-      --cor-fundo: white;
-      --cor-texto: black;
-      --tamanho-fonte: 16px;
-    }
-
-    body {
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
-      font-size: var(--tamanho-fonte);
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-
-    header, main, footer {
-      padding: 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      padding: 0;
-    }
-
-    .banner img,
-    .projeto img,
-    .menu img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .acessibilidade {
-      margin: 10px 0;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .fonte-pequena {
-      font-size: 14px;
-    }
-
-    .fonte-grande {
-      font-size: 20px;
-    }
-
-    /* Alto contraste ativado via checkbox */
-    input#contraste:checked ~ * {
-      --cor-fundo: black;
-      --cor-texto: yellow;
-    }
-  </style>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <script>document.getElementById("contraste").addEventListener("change", function () {
-    if (this.checked) {
-      document.body.classList.add("contraste-ativo");
-    } else {
-      document.body.classList.remove("contraste-ativo");
-    }
-  });</script>
   <header role="banner">
     <h1>Conexão do campo à cidade</h1>
 
-    <!-- 🔧 Botões de Acessibilidade (CSS) -->
+    <!-- 🔧 Botões de Acessibilidade -->
     <div class="acessibilidade">
       <label>
         <input type="checkbox" id="contraste">
@@ -132,5 +70,12 @@
        Telefone: <a href="tel:+5542984349121">(42) 98434-9121</a></p>
     <p>&copy; 2025 Campo à Cidade</p>
   </footer>
+
+  <!-- JS para ativar alto contraste -->
+  <script>
+    document.getElementById("contraste").addEventListener("change", function () {
+      document.body.classList.toggle("contraste-ativo", this.checked);
+    });
+  </script>
 </body>
 </html>
