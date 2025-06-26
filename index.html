@@ -62,7 +62,15 @@
   </style>
 </head>
 <body>
-
+<script>
+  document.getElementById("contraste").addEventListener("change", function () {
+    if (this.checked) {
+      document.body.classList.add("contraste-ativo");
+    } else {
+      document.body.classList.remove("contraste-ativo");
+    }
+  });
+</script>
   <header role="banner">
     <h1>Conexão do campo à cidade</h1>
 
