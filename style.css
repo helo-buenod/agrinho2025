@@ -1,6 +1,6 @@
 *{
-  margin: 0;
-  padding: 0;
+  margin: 120;
+  padding: 50;
   box-sizing: border-box;
 }
 
@@ -75,7 +75,7 @@ a:focus {
 
 /* Contraste ativo */
 body.contraste-ativo {
-  --cor-fundo: black;
+  --cor-fundo: rgb(20, 82, 25);
   --cor-texto: yellow;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
