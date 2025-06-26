@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-fundo: white;
+  --cor-texto: black;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header, main, footer {
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #005e3a;
+  font-weight: bold;
+}
+
+.banner img,
+.projeto img,
+.menu img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.acessibilidade {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.fonte-pequena {
+  font-size: 14px !important;
+}
+
+.fonte-grande {
+  font-size: 20px !important;
+}
+
+a:focus {
+  outline: 3px dashed #333;
+  outline-offset: 4px;
+}
+
+/* Estilo das seções */
+.banner, .projeto, .menu {
+  margin-bottom: 30px;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+/* Contraste ativo */
+body.contraste-ativo {
+  --cor-fundo: black;
+  --cor-texto: yellow;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+body.contraste-ativo nav a {
+  color: yellow;
+}
+
+body.contraste-ativo header,
+body.contraste-ativo footer,
+body.contraste-ativo .banner,
+body.contraste-ativo .projeto,
+body.contraste-ativo .menu {
+  background-color: #111;
+  color: yellow;
+}
+
+body.contraste-ativo a {
+  color: yellow;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
