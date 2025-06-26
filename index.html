@@ -1,15 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conexão do Campo à Cidade</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --cor-fundo: white;
+      --cor-texto: black;
+      --tamanho-fonte: 16px;
+    }
+
+    body {
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      font-size: var(--tamanho-fonte);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, main, footer {
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+    }
+
+    .banner img,
+    .projeto img,
+    .menu img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .acessibilidade {
+      margin: 10px 0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .fonte-pequena {
+      font-size: 14px;
+    }
+
+    .fonte-grande {
+      font-size: 20px;
+    }
+
+    /* Alto contraste ativado via checkbox */
+    input#contraste:checked ~ * {
+      --cor-fundo: black;
+      --cor-texto: yellow;
+    }
+  </style>
 </head>
 <body>
-  <header>
+
+  <header role="banner">
     <h1>Conexão do campo à cidade</h1>
-    <nav>
+
+    <!-- 🔧 Botões de Acessibilidade (CSS) -->
+    <div class="acessibilidade">
+      <label>
+        <input type="checkbox" id="contraste">
+        Alto Contraste
+      </label>
+      <label>
+        <input type="radio" name="fonte" onclick="document.body.className='fonte-pequena'"> A-
+      </label>
+      <label>
+        <input type="radio" name="fonte" onclick="document.body.className=''"> A
+      </label>
+      <label>
+        <input type="radio" name="fonte" onclick="document.body.className='fonte-grande'"> A+
+      </label>
+    </div>
+
+    <nav aria-label="Navegação principal">
       <ul>
         <li><a href="#projeto">Projeto</a></li>
         <li><a href="#inicio">Início</a></li>
@@ -18,37 +92,40 @@
     </nav>
   </header>
 
-  <section class="banner">
-    <img src="WhatsApp Image 2025-06-12 at 17.08.49.jpeg" alt="Campo de milho">
- <div class="info">
-      <h2>Projeto de Conexão</h2>
-      <p>Unindo o campo à cidade com inovação e tradição.</p>
-      <p1>fonte:imagem direito autoral</p1>
-    </div>
-  </section>
+  <main>
+    <section class="banner" id="inicio" aria-label="Seção introdutória com imagem do campo">
+      <img src="WhatsApp Image 2025-06-12 at 17.08.49.jpeg" alt="Campo de milho ao pôr do sol">
+      <div class="info">
+        <h2>Projeto de Conexão</h2>
+        <p>Unindo o campo à cidade com inovação e tradição.</p>
+        <small>Fonte: imagem com direitos autorais</small>
+      </div>
+    </section>
 
-  <section class="projeto" id="projeto">
-    <img src="image copy.png" alt="Colheitadeira">
-    <div>
-      <h2>Conexão</h2>
-      <p>Celebramos as raízes que nos unem ao campo e à cidade, tradições que alimentam o Brasil.</p>
-    </div>
-  </section>
+    <section class="projeto" id="projeto" aria-label="Descrição do projeto">
+      <img src="image copy.png" alt="Máquina colheitadeira em plantação">
+      <div>
+        <h2>Conexão</h2>
+        <p>Celebramos as raízes que nos unem ao campo e à cidade, tradições que alimentam o Brasil.</p>
+      </div>
+    </section>
 
-  <section class="menu" id="menu">
-    <h2>Menu</h2>
-    <ul>
-      <li>Deseja expandir seu negócio para a cidade? Conte conosco para uma transição segura e rápida.</li>
-      <li>Aumente seu negócio para outros estados com retorno rápido e seguro.</li>
-      <li>Tecnologia de ponta conectando o campo à cidade.</li>
-    </ul>
-    <img src="image copy 3.png" alt="Irrigação agrícola">
-    <p>fonte: imagem autoral</p>
-  </section>
+    <section class="menu" id="menu" aria-label="Lista de serviços">
+      <h2>Menu</h2>
+      <ul>
+        <li>Deseja expandir seu negócio para a cidade? Conte conosco para uma transição segura e rápida.</li>
+        <li>Aumente seu negócio para outros estados com retorno rápido e seguro.</li>
+        <li>Tecnologia de ponta conectando o campo à cidade.</li>
+      </ul>
+      <img src="image copy 2.png" alt="Sistema de irrigação agrícola moderno">
+    </section>
+  </main>
 
-  <footer>
-    <p>Contato: heloisabueno1508@gmail.com| Telefone: (42) 984349121</p>
-    <p>&copy; 2025 campo a cidade</p>
+  <footer role="contentinfo" aria-label="Informações de contato e direitos autorais">
+    <p>Contato: <a href="mailto:heloisabueno1508@gmail.com">heloisabueno1508@gmail.com</a> | 
+       Telefone: <a href="tel:+5542984349121">(42) 98434-9121</a></p>
+    <p>&copy; 2025 Campo à Cidade</p>
   </footer>
+
 </body>
 </html>
