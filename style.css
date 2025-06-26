@@ -76,13 +76,13 @@ a:focus {
 /* Contraste ativo */
 body.contraste-ativo {
   --cor-fundo: rgb(20, 82, 25);
-  --cor-texto: yellow;
+  --cor-texto: rgb(27, 110, 55);
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
 }
 
 body.contraste-ativo nav a {
-  color: yellow;
+  color: rgb(55, 170, 19);
 }
 
 body.contraste-ativo header,
