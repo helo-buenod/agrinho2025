@@ -4,13 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conexão do Campo à Cidade</title>
-  <link rel="stylesheet" href="estilo.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: black;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    header, main, footer {
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #005e3a;
+      font-weight: bold;
+    }
+
+    .banner img,
+    .projeto img,
+    .menu img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .acessibilidade {
+      margin: 10px 0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .fonte-pequena {
+      font-size: 14px !important;
+    }
+
+    .fonte-grande {
+      font-size: 20px !important;
+    }
+
+    a:focus {
+      outline: 3px dashed #333;
+      outline-offset: 4px;
+    }
+
+    .banner, .projeto, .menu {
+      margin-bottom: 30px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+   
+    body.contraste-ativo {
+      background-color: black;
+      color: yellow;
+    }
+
+    body.contraste-ativo a {
+      color: yellow;
+    }
+
+    body.contraste-ativo header,
+    body.contraste-ativo footer,
+    body.contraste-ativo .banner,
+    body.contraste-ativo .projeto,
+    body.contraste-ativo .menu {
+      background-color: #111;
+      color: yellow;
+    }
+
+    body.contraste-ativo nav a {
+      color: yellow;
+    }
+
+  </style>
 </head>
 <body>
   <header role="banner">
     <h1>Conexão do campo à cidade</h1>
 
-    <!-- 🔧 Botões de Acessibilidade -->
+   
     <div class="acessibilidade">
       <label>
         <input type="checkbox" id="contraste">
@@ -71,10 +163,14 @@
     <p>&copy; 2025 Campo à Cidade</p>
   </footer>
 
-  <!-- JS para ativar alto contraste -->
+ 
   <script>
-    document.getElementById("contraste").addEventListener("change", function () {
-      document.body.classList.toggle("contraste-ativo", this.checked);
+    document.addEventListener("DOMContentLoaded", function () {
+      const contrasteCheckbox = document.getElementById("contraste");
+
+      contrasteCheckbox.addEventListener("change", function () {
+        document.body.classList.toggle("contraste-ativo", this.checked);
+      });
     });
   </script>
 </body>
