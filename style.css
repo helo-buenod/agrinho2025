@@ -91,11 +91,11 @@ body.contraste-ativo .banner,
 body.contraste-ativo .projeto,
 body.contraste-ativo .menu {
   background-color: #111;
-  color: yellow;
+  color: rgb(53, 211, 21);
 }
 
 body.contraste-ativo a {
-  color: yellow;
+  color: rgb(39, 112, 42);
 }
 
 footer {
