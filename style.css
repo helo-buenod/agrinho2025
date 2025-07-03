@@ -66,7 +66,7 @@ a:focus {
 /* Contraste ativo */
 body.contraste-ativo {
   --cor-fundo: rgb(20, 82, 25);
-  --cor-texto: rgb(27, 110, 55);
+  --cor-texto: rgb(21, 70, 0);
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
 }
