@@ -1,78 +1,155 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-  font-size: 16px;
-  line-height: 1.6;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header, main, footer {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #e5f7ed;
   padding: 20px;
+  border-bottom: 2px solid #c4e7d6;
 }
 
+header h1 {
+  font-size: 28px;
+  color: #005e3a;
+  margin-bottom: 10px;
+}
+
+/* Navegação */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 nav a {
   text-decoration: none;
-  color: #005e3a;
+  color: #007c4a;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-.banner img,
-.projeto img,
-.menu img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+nav a:hover {
+  color: #004d2e;
 }
 
+/* Acessibilidade */
 .acessibilidade {
   margin: 10px 0;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.fonte-pequena {
-  font-size: 14px !important;
+.acessibilidade input {
+  margin-right: 5px;
 }
 
-.fonte-grande {
-  font-size: 20px !important;
+/* Seções gerais */
+main {
+  padding: 20px;
 }
 
-a:focus {
-  outline: 3px dashed #333;
-  outline-offset: 4px;
+section {
+  margin-bottom: 40px;
 }
 
-/* Estilo das seções */
-.banner, .projeto, .menu {
-  margin-bottom: 30px;
+/* Banner com imagem */
+.banner {
+  position: relative;
+  text-align: center;
 }
 
-.info {
-  margin-top: 10px;
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-/* Contraste ativo */
+.banner .info {
+  margin-top: 15px;
+}
+
+/* Projeto */
+.projeto img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.projeto h2 {
+  color: #005e3a;
+  margin-bottom: 10px;
+}
+
+.projeto p2 {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Menu */
+.menu h2 {
+  margin-bottom: 15px;
+  color: #005e3a;
+}
+
+.menu ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #e5f7ed;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #c4e7d6;
+  font-size: 14px;
+}
+
+footer a {
+  color: #005e3a;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Alto contraste */
 body.contraste-ativo {
-  --cor-fundo: rgb(20, 82, 25);
-  --cor-texto: rgb(21, 70, 0);
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-}
-
-body.contraste-ativo nav a {
-  color: rgb(55, 170, 19);
+  background-color: black;
+  color: #12d612;
 }
 
 body.contraste-ativo header,
@@ -81,14 +158,38 @@ body.contraste-ativo .banner,
 body.contraste-ativo .projeto,
 body.contraste-ativo .menu {
   background-color: #111;
-  color: rgb(53, 211, 21);
+  color: #21ad6c;
 }
 
-body.contraste-ativo a {
-  color: rgb(39, 112, 42);
+body.contraste-ativo nav a {
+  color: #11cf0b;
 }
 
-footer {
-  text-align: center;
-  margin-top: 30px;
+/* Tamanhos de fonte acessíveis */
+.fonte-pequena {
+  font-size: 14px !important;
+}
+
+.fonte-grande {
+  font-size: 20px !important;
+}
+
+/* Imagens responsivas */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .acessibilidade {
+    justify-content: flex-start;
+  }
+
+  .banner .info, .projeto div, .menu {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
